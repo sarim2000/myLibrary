@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>myLibrary</title>
+</head>
+<body>
+    <div class="topbar">
+        <h1>Library!</h1>
+    </div>
+    
+    <div id = "main-container">
+        <table id = "table1">
+            <tr>
+                <th>Author</th>
+                <th>Title</th>
+                <th>Pages</th>
+                <th>Read </th>
+                <!-- <th id = "delete">Delete</th> -->
+            </tr>
+            
+        </table>
+    </div>
+    <button class="open-button" onclick="openForm()">Open Form</button>
+    <div class = "form-popup" id="myForm"> 
+        <form id = "form-add" action="#">
+        <fieldset class="formfieldset">
+            <legend>Add a book</legend>
+            <input type="text" class="form-element" id="author" placeholder="Author Name"><br>
+            <input type="text" class="form-element" id="title" placeholder="Title Name"><br>
+            <input type="number" class="form-element" id="pages" placeholder="No. Of Pages" min="0"><br>
+            <!-- <label for="">Did you read it?</label><input type="checkbox" class="" id="read"> -->
+            <button type="submit" class = "form-element" >Add</button>
+            <button class = "form-element" onclick="closeForm()">Cancel</button>
+        </fieldset>
+        </form>
+    </div>
+    <div>
+        <button onclick="deleteRow()" class="btn1">Delete</button>
+    </div>
+    <script src="index.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.0.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/8.0.0/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+</body>
+    
+</html>
